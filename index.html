@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: black;
+      background-color: #f7f7f7;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      margin-left: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    header a:hover {
+      color: red;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('hero-background.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 150px 20px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.8rem;
+      margin: 10px 0 20px;
+      color: red;
+    }
+
+    .hero .cta-btn {
+      background: red;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+
+    .hero .cta-btn:hover {
+      background: white;
+      color: red;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* About Section */
+    .about {
+      display: flex;
+      padding: 80px 40px;
+      background-color: white;
+      align-items: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .about img {
+      border-radius: 50%;
+      border: 5px solid red;
+      margin-right: 50px;
+    }
+
+    .about .about-text {
+      max-width: 600px;
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .about a {
+      background: red;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .about a:hover {
+      background: #ff4d4d;
+    }
+
+    /* Skills Section */
+    .skills {
+      background: #111;
+      color: white;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .skills h2 {
+      color: red;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .skills .skill-bars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .skills .skill-bars div h3 {
+      font-weight: 500;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .skills .skill-bars div .progress {
+      background: white;
+      border-radius: 5px;
+      height: 25px;
+      position: relative;
+    }
+
+    .skills .skill-bars div .progress::before {
+      content: '';
+      background: red;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .skills .skill-bars div:nth-child(1) .progress::before {
+      width: 90%;
+    }
+
+    .skills .skill-bars div:nth-child(2) .progress::before {
+      width: 85%;
+    }
+
+    .skills .skill-bars div:nth-child(3) .progress::before {
+      width: 80%;
+    }
+
+    /* Projects Section */
+    .projects {
+      padding: 100px 40px;
+      background-color: white;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .project-item {
+      margin-bottom: 20px;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 100px 40px;
+      background-color: #f7f7f7;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input, .contact textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: red;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #ff4d4d;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      padding: 30px;
+      color: white;
+      text-align: center;
+    }
+
+    footer a {
+      color: red;
+      text-decoration: none;
+    }
+
+    /* Social Media Links */
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: red;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h1 style="color:red;">NIRAJ DHUNGANA</h1>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Niraj Dhungana.</h1>
+    <p>DevOps Engineer | Django Developer</p>
+    <a href="#projects" class="cta-btn">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <img src="Portfolio/Niraj.jpg" alt="Your Image" width="200">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I am a DevOps Engineer and Django Developer with experience in building scalable infrastructures and deploying applications.</p>
+      <a href="Portfolio/NIRAJ_DHUNGANA_CV.pdf" class="cta-btn">Download CV</a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skill-bars">
+      <div>
+        <h3>DevOps</h3>
+        <div class="progress"></div>
+      </div>
+      <div>
+        <h3>Django</h3>
+        <div class="progress"></div>
+      </div>
+      <div>
+        <h3>Python</h3>
+        <div class="progress"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-item">
+      <h3>Project 1</h3>
+      <p>Description of Project 1.</p>
+    </div>
+    <div class="project-item">
+      <h3>Project 2</h3>
+      <p>Description of Project 2.</p>
+    </div>
+    <div class="project-item">
+      <h3>Project 3</h3>
+      <p>Description of Project 3.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="send_email.php" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Niraj Dhungana. All rights reserved.</p>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://www.facebook.com/niraj.dhungana.583?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/niraj.dhungana/profilecard/?igsh=cG9oZDQwbmF6bzBx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://np.linkedin.com/in/niraj-dhungana-76a61120a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/Niraaaaaj/" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+    <a href="#top">Back to top</a>
+  </footer>
+
+</body>
+</html>
