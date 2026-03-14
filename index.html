@@ -19,7 +19,6 @@
       line-height: 1.6;
     }
 
-    /* Header */
     header {
       background: #111;
       padding: 20px 40px;
@@ -40,7 +39,6 @@
       color: red;
     }
 
-    /* Hero Section */
     .hero {
       background: url('hero-background.jpg') no-repeat center center/cover;
       color: white;
@@ -82,7 +80,6 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* About Section */
     .about {
       display: flex;
       padding: 80px 40px;
@@ -128,7 +125,6 @@
       background: #ff4d4d;
     }
 
-    /* Skills Section */
     .skills {
       background: #111;
       color: white;
@@ -171,19 +167,10 @@
       top: 0;
     }
 
-    .skills .skill-bars div:nth-child(1) .progress::before {
-      width: 90%;
-    }
+    .skills .skill-bars div:nth-child(1) .progress::before { width: 90%; }
+    .skills .skill-bars div:nth-child(2) .progress::before { width: 85%; }
+    .skills .skill-bars div:nth-child(3) .progress::before { width: 80%; }
 
-    .skills .skill-bars div:nth-child(2) .progress::before {
-      width: 85%;
-    }
-
-    .skills .skill-bars div:nth-child(3) .progress::before {
-      width: 80%;
-    }
-
-    /* Projects Section */
     .projects {
       padding: 100px 40px;
       background-color: white;
@@ -199,7 +186,6 @@
       margin-bottom: 20px;
     }
 
-    /* Contact Section */
     .contact {
       padding: 100px 40px;
       background-color: #f7f7f7;
@@ -237,7 +223,6 @@
       background: #ff4d4d;
     }
 
-    /* Footer */
     footer {
       background: #111;
       padding: 30px;
@@ -250,7 +235,6 @@
       text-decoration: none;
     }
 
-    /* Social Media Links */
     .social-links {
       margin-top: 20px;
     }
@@ -266,114 +250,105 @@
       color: red;
     }
 
-    /* Animations */
     @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
   </style>
 </head>
-<body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <h1 style="color:red;">NIRAJ DHUNGANA</h1>
+<body id="top">
+
+<header>
+  <div class="logo">
+    <h1 style="color:red;">NIRAJ DHUNGANA</h1>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Niraj Dhungana.</h1>
+  <p>DevOps Engineer | Django Developer</p>
+  <a href="#projects" class="cta-btn">View My Work</a>
+</section>
+
+<section class="about" id="about">
+  <img src="Niraj.jpg" alt="Your Image" width="200">
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>I am a DevOps Engineer and Django Developer with experience in building scalable infrastructures and deploying applications.</p>
+
+    <!-- FIXED DOWNLOAD BUTTON -->
+    <a href="NIRAJ_DHUNGANA_CV.pdf" download class="cta-btn">
+      <i class="fas fa-download"></i> Download CV
+    </a>
+
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <h2>Skills</h2>
+  <div class="skill-bars">
+    <div>
+      <h3>DevOps</h3>
+      <div class="progress"></div>
     </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <h1>Niraj Dhungana.</h1>
-    <p>DevOps Engineer | Django Developer</p>
-    <a href="#projects" class="cta-btn">View My Work</a>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <img src="Niraj.jpg" alt="Your Image" width="200">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>I am a DevOps Engineer and Django Developer with experience in building scalable infrastructures and deploying applications.</p>
-      <a href="NIRAJ_DHUNGANA_CV.pdf" class="cta-btn">Download CV</a>
+    <div>
+      <h3>Django</h3>
+      <div class="progress"></div>
     </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <h2>Skills</h2>
-    <div class="skill-bars">
-      <div>
-        <h3>DevOps</h3>
-        <div class="progress"></div>
-      </div>
-      <div>
-        <h3>Django</h3>
-        <div class="progress"></div>
-      </div>
-      <div>
-        <h3>Python</h3>
-        <div class="progress"></div>
-      </div>
+    <div>
+      <h3>Python</h3>
+      <div class="progress"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-item">
-      <h3>Project 1</h3>
-      <p>Description of Project 1.</p>
-    </div>
-    <div class="project-item">
-      <h3>Project 2</h3>
-      <p>Description of Project 2.</p>
-    </div>
-    <div class="project-item">
-      <h3>Project 3</h3>
-      <p>Description of Project 3.</p>
-    </div>
-  </section>
+<section class="projects" id="projects">
+  <h2>Projects</h2>
+  <div class="project-item">
+    <h3>Project 1</h3>
+    <p>Description of Project 1.</p>
+  </div>
+  <div class="project-item">
+    <h3>Project 2</h3>
+    <p>Description of Project 2.</p>
+  </div>
+  <div class="project-item">
+    <h3>Project 3</h3>
+    <p>Description of Project 3.</p>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <form action="send_email.php" method="post">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <form action="send_email.php" method="post">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Niraj Dhungana. All rights reserved.</p>
+<footer>
+  <p>&copy; 2024 Niraj Dhungana. All rights reserved.</p>
 
-    <!-- Social Media Links -->
-    <div class="social-links">
-      <a href="https://www.facebook.com/niraj.dhungana.583?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/niraj.dhungana/profilecard/?igsh=cG9oZDQwbmF6bzBx" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://np.linkedin.com/in/niraj-dhungana-76a61120a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/Niraaaaaj/" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
+  <div class="social-links">
+    <a href="https://www.facebook.com/niraj.dhungana.583?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/niraj.dhungana/profilecard/?igsh=cG9oZDQwbmF6bzBx" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://np.linkedin.com/in/niraj-dhungana-76a61120a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/Niraaaaaj/" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
 
-    <a href="#top">Back to top</a>
-  </footer>
+  <a href="#top">Back to top</a>
+</footer>
 
 </body>
 </html>
